@@ -1,38 +1,232 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system,
+  'BlinkMacSystemFont',
+  'Segoe UI',
+  'Roboto',
+  'Helvetica',
+  'Arial',
+  sans-serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol';
+}
+
+.list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #1e234d;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.list-item:hover {
+  box-shadow: 0 5px 15px whitesmoke;
+  transform: scale(1.05);
+  transition: ease 1s;
+}
+
+.top-nav{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-image svg{
+  width: 100%;
+  height: 100%;
+  fill: rgb(245, 245, 245);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list-item{
+  border: 2px solid whitesmoke;
+  border-radius: 15px;
+  background: rgb(36, 40, 47);
+  display: flex;
+  color: whitesmoke;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .8);
+  transition: ease 0.5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list a{
+  margin: 40px;
+}
+
+.list-item h2{
+  text-align: center;
+  padding: 15px;
+}
+
+.top-nav h1{
+  text-align: center;
+  padding: 50px 0;
+  z-index: 1;
+}
+
+.item-prop{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+}
+
+.FilterBar{
+  display: flex;
+  padding: 20px;
+  background: rgb(36, 40, 47);
+  border-bottom: 1px solid white;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.FilterBar div {
+  width: 50%;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.FilterBar div select{
+  width: 50%;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.FilterBar div button{
+  width: 200px;
+  height: 100%;
+
+  overflow: hidden;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.details {
+  padding: 50px;
+  background-color: rgb(60, 62, 68);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .8);
+  border-radius: 15px 15px 0px 0px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+}
+
+.detail-item .detail-item-img img{
+  height: 80%;
+  border-radius: 40%;
+  transition: 2s ease-out;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .8);
+}
+
+.detail-item .detail-item-img img:hover {
+  border-radius: 10%;
+  transition: 2s ease-out;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+}
+
+.detail-item-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-item-text-top > li {
+  color: #fff;
+  padding: 10px;
+  border-bottom: 2px solid rgb(36, 40, 47);
+}
+
+.detail-item-text-top>li:last-child {
+  border: none;
+}
+
+.episode-names li {
+  list-style-type: circle;
+  margin-left: 40px;
+}
+
+.detail-item-text-top h1{
+  text-align: center;
+  color: rgb(255, 152, 0);
+  margin-bottom: 10px;
+}
+
+.backbutton{
+  padding: 15px;
+  overflow: hidden;
+  border: none;
+  border-radius: 10%;
+  font-weight: 400;
+  font-size: large;
+  cursor: pointer;
+  background: rgb(255, 152, 0);
+  color: #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+}
+
+.backbutton:hover{
+  box-shadow: 0 3px 20px whitesmoke;
+  color: rgb(255, 152, 0);
+  background: whitesmoke;
+}
+
+.notfound{
+  background: #1e234d;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+}
+
+.notfound img{
+  width: 30%;
+}
+
+.notfound div h2{
+  font-weight: 300;
+  font-style: italic;
+}
+
+.loading{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  background-color: rgb(60, 62, 68);
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .8);
+  border-radius: 15px 15px 0px 0px;
+}
+
+.loading img{
+  width: 200px;
+  height: 200px;
+}
+
+.loading h2{
+  color: #fff;
+  font-weight: 600;
+  margin-top: 50px;
 }
