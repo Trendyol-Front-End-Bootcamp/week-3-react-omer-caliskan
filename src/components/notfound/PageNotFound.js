@@ -1,10 +1,11 @@
 import React from 'react';
 import '../../assets/css/notfound.css';
+import NotFoundImage from '../../assets/images/notfound.png'
 
 function PageNotFound(){
     return(
         <div className="notfound">
-        <img src="https://staticdelivery.nexusmods.com/mods/1151/images/528-0-1447526230.png" />
+        <img src={NotFoundImage} alt="Page Not Found" />
         <div>
          <h1>NO RESULT</h1>
         <h2>The page you are trying to search has been moved to another universe.</h2>
