@@ -7,6 +7,7 @@
     flex-direction: column;
     box-shadow: 0 0 20px var(--box-shadow-dark);
     transition: ease 0.7s;
+    height: 520px;
 }
 
 .list-item:hover {
@@ -15,13 +16,15 @@
     transition: ease 1s;
 }
 
-.list-item h2 {
+.list-item h3 {
     text-align: center;
     padding: 15px;
+    color: var(--button-orange);
 }
 
 .item-prop {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    margin: auto;
 }

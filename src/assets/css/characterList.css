@@ -1,9 +1,9 @@
 .list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 295px);
     background: var(--navy-blue-background);
 }
 
 .list a {
-    margin: 40px;
+    margin: 30px;
 }
