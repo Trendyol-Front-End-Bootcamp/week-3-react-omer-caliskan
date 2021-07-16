@@ -1,0 +1,18 @@
+.FilterBar {
+    display: flex;
+    padding: 20px;
+    background: var(--dark-gray);
+    border-bottom: 1px solid var(--pure-white);
+    color: var(--pure-white);
+}
+
+.FilterBar div {
+    width: 50%;
+    text-align: center;
+}
+
+.FilterBar div select {
+    width: 50%;
+    margin-left: 20px;
+    padding: 10px;
+}

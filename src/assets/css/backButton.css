@@ -1,0 +1,18 @@
+.backbutton {
+    padding: 15px;
+    overflow: hidden;
+    border: none;
+    border-radius: 15%;
+    font-weight: 400;
+    font-size: large;
+    cursor: pointer;
+    background: var(--button-orange);
+    color: var(--whitesmoke);
+    box-shadow: 0 10px 10px var(--box-shadow-light);
+}
+
+.backbutton:hover {
+    box-shadow: 0 0 5px var(--whitesmoke);
+    color: var(--button-orange);
+    background: var(--whitesmoke);
+}

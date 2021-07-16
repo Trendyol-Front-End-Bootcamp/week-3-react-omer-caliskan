@@ -1,0 +1,55 @@
+.details {
+    padding: 50px;
+    background-color: var(--navy-blue-background);
+    box-shadow: 0 5px 20px var(--box-shadow-dark);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.detail-item .detail-item-img img {
+    height: 80%;
+    border-radius: 10%;
+    transition: 2s ease-out;
+    box-shadow: 0 3px 10px var(--box-shadow-dark);
+}
+
+.detail-item .detail-item-img img:hover {
+    border-radius: 40%;
+    transition: 2s ease-out;
+    cursor: pointer;
+    box-shadow: 0 4px 10px var(--box-shadow-light);
+}
+
+.detail-item-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-item-text-top>li {
+    color: var(--pure-white);
+    padding: 10px;
+    border-bottom: 2px solid var(--whitesmoke);
+}
+
+.detail-item-text-top>li:last-child {
+    border: none;
+}
+
+.detail-item-text-top h1 {
+    text-align: center;
+    color: var(--button-orange);
+    margin-bottom: 10px;
+}
+
+/* Represents last 5 episode names list */
+
+.episode-names li {
+    list-style-type: circle;
+    margin-left: 40px;
+}

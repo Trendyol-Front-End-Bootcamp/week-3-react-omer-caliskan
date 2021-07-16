@@ -1,5 +1,6 @@
 import React from'react';
-import Pickle from "../../images/pickle.png";
+import Pickle from "../../assets/images/pickle.png";
+import '../../assets/css/loading.css';
 
 function Loading(){
     return (

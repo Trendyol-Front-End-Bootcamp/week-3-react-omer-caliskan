@@ -2,8 +2,9 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import CharacterList from '../character/CharacterList';
 import PageNotFound from '../notfound/PageNotFound';
+import '../../assets/css/filterBar.css';
 
-function SearchBar(){
+function FilterBar(){
 const [gender, setGender] = useState("");
 const [status, setStatus] = useState("");
 const [filterChar, setFilterChar] = useState([]);
@@ -53,4 +54,4 @@ const filterquery = `?${gender!=="All" ? "gender=" + gender + "&" : ""}${status!
     );
 }
 
-export default SearchBar;
+export default FilterBar;

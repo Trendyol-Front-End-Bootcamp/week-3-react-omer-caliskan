@@ -1,0 +1,16 @@
+.notfound {
+    background: var(--navy-blue-background);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--pure-white);
+}
+
+.notfound img {
+    width: 30%;
+}
+
+.notfound div h2 {
+    font-weight: 300;
+    font-style: italic;
+}

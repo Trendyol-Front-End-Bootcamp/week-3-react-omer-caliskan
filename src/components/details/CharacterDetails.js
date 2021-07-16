@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom'
 import BackButton from '../layout/BackButton';
 import Loading from '../layout/Loading';
+import '../../assets/css/characterDetails.css';
 
 function CharacterDetails(){
   const [character, setCharacter] = useState({

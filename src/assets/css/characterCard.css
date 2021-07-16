@@ -1,0 +1,27 @@
+.list-item {
+    display: flex;
+    border: 2px solid var(--whitesmoke);
+    border-radius: 15px;
+    background: var(--dark-gray);
+    color: var(--whitesmoke);
+    flex-direction: column;
+    box-shadow: 0 0 20px var(--box-shadow-dark);
+    transition: ease 0.7s;
+}
+
+.list-item:hover {
+    box-shadow: 0 0 15px var(--whitesmoke);
+    transform: scale(1.05);
+    transition: ease 1s;
+}
+
+.list-item h2 {
+    text-align: center;
+    padding: 15px;
+}
+
+.item-prop {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}

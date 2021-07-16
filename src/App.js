@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import SearchBar from './components/search/SearchBar';
+import './assets/css/App.css';
+import FilterBar from './components/filter/FilterBar';
 import Navbar from './components/layout/Navbar';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import CharacterDetails from './components/details/CharacterDetails';
@@ -16,7 +16,7 @@ function App() {
         </Route>
 
         <Route exact path="/">
-          <SearchBar />
+          <FilterBar />
         </Route>
 
     </Router>

@@ -1,20 +1,8 @@
 import CharacterCard from './CharacterCard';
 import { Link } from 'react-router-dom'
+import '../../assets/css/characterList.css';
 
-function CharacterList({characters}) {/*
-    let [characters, setCharacters] = useState([]);
-    useEffect(()=> {
-        axios
-            .get("https://rickandmortyapi.com/api/character")
-            .then(response => {
-                setCharacters(response.data.results);
-            });
-    }, []);
-
-    if(filterChar){
-        characters = filterChar;
-    }*/
-
+function CharacterList({characters}) {
     return (  
         <div className="list">
             {characters.map((char, id) => (

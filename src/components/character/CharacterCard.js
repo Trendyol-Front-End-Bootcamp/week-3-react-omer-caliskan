@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/css/characterCard.css';
 
 function CharacterCard({char}) {
     return (

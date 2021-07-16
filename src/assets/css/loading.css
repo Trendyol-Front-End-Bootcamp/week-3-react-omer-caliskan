@@ -1,0 +1,23 @@
+.loading {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    background-color: var(--navy-blue-background);
+    flex-direction: column;
+    box-shadow: 0 5px 20px var(--box-shadow-dark);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.loading img {
+    width: 200px;
+    height: 200px;
+}
+
+.loading h2 {
+    color: var(--pure-white);
+    font-weight: 600;
+    margin-top: 50px;
+}
