@@ -24,3 +24,7 @@ Developing a React application that prints characters and detail pages using the
 * clone project
 * yarn install
 * yarn start
+
+## Demo Site
+
+[Rick And Morty Universe](https://omerc-rick-and-morty-api.netlify.app)
