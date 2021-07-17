@@ -2,11 +2,11 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import CharacterList from '../character/CharacterList';
 import PageNotFound from '../notfound/PageNotFound';
-import '../../assets/css/filterBar.css';
+import '../../assets/css/homepage.css';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Loading from '../layout/Loading';
 
-function FilterBar(){
+function Homepage(){
 const [gender, setGender] = useState("");
 const [status, setStatus] = useState("");
 const [characters, setCharacters] = useState([]);
@@ -68,4 +68,4 @@ const [loading, setLoading] = useState(false);
     );
 }
 
-export default FilterBar;
+export default Homepage;
