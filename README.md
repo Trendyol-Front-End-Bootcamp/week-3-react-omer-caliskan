@@ -18,6 +18,7 @@ Developing a React application that prints characters and detail pages using the
 * assets file includes images and css files
 
 * components file includes all compoments that used in project such as loading page, filter bar, navbar, character cards etc.
+* All fetching operations done in src > filter > FilterBar.js
 
 ## For Installation
 
