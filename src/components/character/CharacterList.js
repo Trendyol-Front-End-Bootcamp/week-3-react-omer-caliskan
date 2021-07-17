@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import '../../assets/css/characterList.css';
 
 function CharacterList({characters}) {
+
     return (  
         <div className="list">
             {characters.map((char, id) => (

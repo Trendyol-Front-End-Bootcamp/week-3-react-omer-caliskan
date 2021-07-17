@@ -1,4 +1,4 @@
-.list {
+.list{
     display: grid;
     grid-template-columns: repeat(5, 295px);
     background: var(--navy-blue-background);
