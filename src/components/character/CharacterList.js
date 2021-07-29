@@ -1,6 +1,7 @@
 import CharacterCard from './CharacterCard';
 import { Link } from 'react-router-dom'
 import '../../assets/css/characterList.css';
+import React from 'react';
 
 function CharacterList({characters}) {
 
