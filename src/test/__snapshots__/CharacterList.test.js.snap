@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Character List Component should render character list 1`] = `ShallowWrapper {}`;
