@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import { getEpisodeName } from "../../service/RickandMortyService"
 
-function EpisodeNames( {episode} ){
-const [episodes, setEpisodes] = useState([]);
+function EpisodeNames( {episodeUrl} ){
+const [episodeName, setEpisodeName] = useState("");
 
 useEffect( () => {
-    axios
-        .get(episode)
-        .then(response => {setEpisodes(response.data)})
-}, [episode])
+    const fetch = async () => {
+        const data = await getEpisodeName(episodeUrl);
+        setEpisodeName(data)
+      }
+
+      fetch();
+}, [episodeUrl])
 
 return(
-    <li>{episodes.name}</li>
+    <li>{episodeName}</li>
 )
 
 }

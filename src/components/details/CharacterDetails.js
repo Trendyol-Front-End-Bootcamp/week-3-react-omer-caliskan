@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import EpisodeNames from './EpisodeNames';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom'
 import BackButton from '../layout/BackButton';
 import Loading from '../layout/Loading';
 import '../../assets/css/characterDetails.css';
+import { getCharacterById } from "../../service/RickandMortyService"
 
 function CharacterDetails(){
   const [character, setCharacter] = useState({
@@ -22,11 +22,15 @@ function CharacterDetails(){
   const {id} = useParams();
 
   useEffect( () => {
-    axios
-        .get(`https://rickandmortyapi.com/api/character/${id}`)
-        .then(response => {
-          setCharacter(response.data)
-          setLoading(true)});
+
+    const fetch = async () => {
+      const data = await getCharacterById(id);
+      setCharacter(data)
+      setLoading(true)
+    }
+
+    fetch();
+
   }, [id, loading]);
 
 
@@ -51,8 +55,8 @@ function CharacterDetails(){
                 <li>
                   <span><strong>Last 5 Episodes:</strong></span>
                   <ul className="episode-names">
-                    {character.episode.slice().reverse().filter((episode, id) => id < 5).map((episode, id) => (
-                    <EpisodeNames key={id} episode={episode} />
+                    {character.episode.slice().reverse().filter((episode, idx) => idx < 5).map((episodeUrl, id) => (
+                    <EpisodeNames key={id} episodeUrl={episodeUrl} />
                       ))}
                   </ul>
                 </li>

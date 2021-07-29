@@ -5,6 +5,7 @@ import PageNotFound from '../notfound/PageNotFound';
 import '../../assets/css/homepage.css';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Loading from '../layout/Loading';
+import { getCharactersByPageandFilter } from "../../service/RickandMortyService"
 
 function Homepage(){
 const [gender, setGender] = useState("");
@@ -16,17 +17,20 @@ const [hasMore, setHasMore] = useState(true);
 const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-         const filterquery = `?page=${page}${gender!=="All" ? "&gender=" + gender : ""}${status!=="All" ? "&status=" + status : ""}`;
-        
-        axios
-            .get(`https://rickandmortyapi.com/api/character/${filterquery}`)
-            .then(response => {
-                setCharacters([...characters, ...response.data.results])
+         const fetch = async () => {
+            try {
+                const data = await getCharactersByPageandFilter(page, gender, status);
+                setCharacters([...characters, ...data.results])
                 setError(true)
-                setHasMore(response.data.info.next)
+                setHasMore(data.info.next)
                 setLoading(true)
-                })
-            .catch((error) => setError(false));
+            } catch (error) {
+                setError(false)
+            }
+            
+        }
+         
+        fetch();
     }, [gender, status, page]);
 
     return(
