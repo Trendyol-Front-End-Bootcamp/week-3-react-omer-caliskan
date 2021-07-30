@@ -14,11 +14,12 @@ const [characters, setCharacters] = useState([]);
 const [error, setError] = useState(true);
 const [page, setPage] = useState(1);
 const [hasMore, setHasMore] = useState(true);
-const [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(true);
 
     useEffect(() => {
          const fetch = async () => {
             try {
+                setLoading(false)
                 const data = await getCharactersByPageandFilter(page, gender, status);
                 setCharacters([...characters, ...data.results])
                 setError(true)

@@ -7,6 +7,7 @@ export const getCharacterById = async (charId) => {
   await axios
       .get(`https://rickandmortyapi.com/api/character/${charId}`)
       .then(({data}) => {character = data})
+      .catch(error => character = {})
 
       return character;
 }
@@ -20,6 +21,7 @@ export const getCharactersByPageandFilter = async (page, gender, status) => {
   await axios
       .get(`https://rickandmortyapi.com/api/character/${query}`)
       .then(({data}) => {characters = data})
+      .catch(error => characters = [])
 
   return characters;
 }
@@ -31,6 +33,7 @@ export const getEpisodeName = async (episodesUrl) => {
   await axios
         .get(`${episodesUrl}`)
         .then(({data}) => {episodeName = data.name})
+        .catch(error => episodeName = "")
   
   return episodeName;
 }
