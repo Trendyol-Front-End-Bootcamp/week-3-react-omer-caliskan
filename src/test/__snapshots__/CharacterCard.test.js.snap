@@ -1,5 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Character Card Not Found Page should render Page Not Found 1`] = `ShallowWrapper {}`;
-
-exports[`Character Card should render character card 1`] = `ShallowWrapper {}`;
+exports[`Character Card should render character card 1`] = `
+"<div className=\\"list-item\\">
+  <h3>
+    Morty Smith
+  </h3>
+  <img src=\\"https://rickandmortyapi.com/api/character/avatar/2.jpeg\\" alt=\\"Rick and Morty\\" />
+  <div className=\\"item-prop\\">
+    <span>
+      <b>
+        Species:
+      </b>
+       
+      Human
+    </span>
+    <span>
+      <b>
+        Gender:
+      </b>
+       
+      Male
+    </span>
+    <span>
+      <b>
+        Origin:
+      </b>
+       
+      Earth (C-137)
+    </span>
+    <span>
+      <b>
+        Status:
+      </b>
+       
+      Alive
+    </span>
+    <span>
+      <b>
+        Type:
+      </b>
+       -
+    </span>
+    <span>
+      <b>
+        Last Known Location:
+      </b>
+       
+      Earth (Replacement Dimension)
+    </span>
+  </div>
+</div>"
+`;

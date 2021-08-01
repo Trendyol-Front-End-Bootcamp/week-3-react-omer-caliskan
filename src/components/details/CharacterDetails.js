@@ -51,7 +51,6 @@ function CharacterDetails(){
                 <li><strong>Status:</strong> {character.status}</li>
                 <li><strong>Location:</strong> {character.location.name}</li>
                 <li><strong>Origin:</strong> {character.origin.name}</li>
-                {character.type ? <li><strong>Type:</strong> {character.type}</li> : <li><strong>Type:</strong> -</li> }
                 <li>
                   <span><strong>Last 5 Episodes:</strong></span>
                   <ul className="episode-names">
