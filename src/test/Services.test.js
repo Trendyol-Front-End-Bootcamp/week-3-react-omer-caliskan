@@ -59,6 +59,18 @@ describe("RickAndMortyService", () => {
         }
       ]);
     });
+
+    it("should return empty object", async () => {
+      axios.get.mockImplementation(() => {
+        return Promise.reject("error")
+      })
+
+      const data = await getCharacterById(2)
+
+      expect(data).toEqual({})
+
+    })
+
   });
 
   describe("Episode Name", () => {
@@ -77,6 +89,17 @@ describe("RickAndMortyService", () => {
       expect(data).toEqual(
         "Star Mort: Rickturn of the Jerri"
       )
+    })
+
+    it("should return empty string", async () => {
+      axios.get.mockImplementation(() => {
+        return Promise.reject("error")
+      })
+
+      const data = await getEpisodeName("https://rickandmortyapi.com/api/episode/41")
+
+      expect(data).toEqual("")
+
     })
   })
 
@@ -142,6 +165,18 @@ describe("RickAndMortyService", () => {
       )
 
     })
+
+    it("should return empty array", async () => {
+      axios.get.mockImplementation(() => {
+        return Promise.reject("error")
+      })
+
+      const data = await getCharactersByPageandFilter(1, "dead", "genderless");
+
+      expect(data).toEqual([])
+
+    })
+    
   })
 
   describe("Pagination for Characters", () => {
@@ -206,6 +241,18 @@ describe("RickAndMortyService", () => {
       )
 
     })
+
+    it("should return empty array", async () => {
+      axios.get.mockImplementation(() => {
+        return Promise.reject("error")
+      })
+
+      const data = await getCharactersByPageandFilter(4, "All", "All");
+
+      expect(data).toEqual([])
+
+    })
+
   })
 
   describe("Pagination and Filter Characters", () => {
@@ -268,5 +315,17 @@ describe("RickAndMortyService", () => {
           }
         ])
       })  
+
+      it("should return empty array", async () => {
+        axios.get.mockImplementation(() => {
+          return Promise.reject("error")
+        })
+  
+        const data = await getCharactersByPageandFilter(4, "dead", "male");
+  
+        expect(data).toEqual([])
+  
+      })
+      
     })
   })

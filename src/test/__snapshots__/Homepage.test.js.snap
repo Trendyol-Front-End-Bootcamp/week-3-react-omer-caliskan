@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Homepage should render homepage 1`] = `ShallowWrapper {}`;
+
+exports[`Homepage should render selects 1`] = `ShallowWrapper {}`;
