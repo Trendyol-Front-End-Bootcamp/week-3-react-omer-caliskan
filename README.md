@@ -19,6 +19,8 @@ Developing a React application that prints characters and detail pages using the
 
 * components file includes all components that used in the project such as homepage, loading page, details page, navbar, character cards etc.
 
+* add 37 successfull tests about all components and service except CharacterDetail
+
 ## For Installation
 
 * clone project
