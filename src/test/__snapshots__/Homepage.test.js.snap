@@ -1,5 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Homepage should render homepage 1`] = `ShallowWrapper {}`;
-
-exports[`Homepage should render selects 1`] = `ShallowWrapper {}`;
+exports[`Homepage should render homepage 1`] = `
+"<div>
+  <div className=\\"FilterBar\\">
+    <div>
+      <span>
+        Gender:
+      </span>
+      <select onChange={[Function: onChange]}>
+        <option>
+          All
+        </option>
+        <option>
+          Male
+        </option>
+        <option>
+          Female
+        </option>
+        <option>
+          Genderless
+        </option>
+        <option>
+          Unknown
+        </option>
+        <option>
+          ForTest404
+        </option>
+      </select>
+    </div>
+    <div>
+      <span>
+        Status:
+      </span>
+      <select onChange={[Function: onChange]}>
+        <option>
+          All
+        </option>
+        <option>
+          Alive
+        </option>
+        <option>
+          Dead
+        </option>
+        <option>
+          Unknown
+        </option>
+      </select>
+    </div>
+  </div>
+  <InfiniteScroll dataLength={0} next={[Function: next]} hasMore={true} loader={{...}}>
+     
+    <CharacterList characters={{...}} />
+     
+  </InfiniteScroll>
+</div>"
+`;

@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new Adapter() })
         })
   
         it("should render navbar", () => {
-          expect(navbar).toMatchSnapshot();
+          expect(navbar.debug()).toMatchSnapshot();
         })
   
         it("should check truthy of navbar text", () => {

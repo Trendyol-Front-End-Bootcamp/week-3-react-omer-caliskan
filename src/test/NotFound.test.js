@@ -19,7 +19,7 @@ describe("Not Found Page", () => {
               })
 
             it("should render Page Not Found", () => {
-                expect(notfound).toMatchSnapshot()
+                expect(notfound.debug()).toMatchSnapshot()
             })
 
             it("should have right Page Not Found message", () => {

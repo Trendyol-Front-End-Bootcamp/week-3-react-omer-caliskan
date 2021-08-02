@@ -1,3 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Loading Component Test should render loading 1`] = `ShallowWrapper {}`;
+exports[`Loading Component Test should render loading 1`] = `
+"<div className=\\"loading\\">
+  <img src={{...}} alt=\\"Wubba Lubba Dub Dub\\" />
+  <h2>
+    Page Loading ...
+  </h2>
+</div>"
+`;

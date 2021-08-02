@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`episode names should render episode names 1`] = `
+"<li>
+  Star Mort: Rickturn of the Jerri
+</li>"
+`;

@@ -15,7 +15,7 @@ describe("Character List Component", () => {
           characterList = shallow(<CharacterList characters={[characters]} />)
         })
         it("should render character list", () => {
-          expect(characterList).toMatchSnapshot()
+          expect(characterList.debug()).toMatchSnapshot()
         })
   
         it("should check character list class", () => {

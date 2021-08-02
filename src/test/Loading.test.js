@@ -12,7 +12,7 @@ describe("Loading Component Test", () => {
         })
   
         it("should render loading", () => {
-          expect(loading).toMatchSnapshot();
+          expect(loading.debug()).toMatchSnapshot();
         })
   
         it("should have true class", () => {

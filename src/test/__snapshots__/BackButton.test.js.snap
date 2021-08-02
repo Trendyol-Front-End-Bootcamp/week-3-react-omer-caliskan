@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BackButton Component Test should render backbutton 1`] = `ShallowWrapper {}`;
+exports[`BackButton Component Test should render backbutton 1`] = `
+"<Link to=\\"/\\">
+  <button className=\\"backbutton\\">
+    &lt; Homepage
+  </button>
+</Link>"
+`;

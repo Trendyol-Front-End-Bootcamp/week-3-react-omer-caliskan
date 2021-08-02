@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Not Found Page should render Page Not Found 1`] = `
+"<div className=\\"notfound\\">
+  <img src={{...}} alt=\\"Page Not Found\\" />
+  <div>
+    <h1>
+      NO RESULT
+    </h1>
+    <h2>
+      The page you are trying to search has been moved to another universe.
+    </h2>
+  </div>
+</div>"
+`;

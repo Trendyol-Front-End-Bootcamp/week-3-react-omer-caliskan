@@ -37,12 +37,6 @@ exports[`Character Card should render character card 1`] = `
     </span>
     <span>
       <b>
-        Type:
-      </b>
-       -
-    </span>
-    <span>
-      <b>
         Last Known Location:
       </b>
        

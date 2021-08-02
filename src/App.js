@@ -11,7 +11,7 @@ function App() {
     <Router>
         <Navbar />
         
-        <Route path="/:id">
+        <Route path="/:id" component={CharacterDetails}>
             <CharacterDetails />
         </Route>
 

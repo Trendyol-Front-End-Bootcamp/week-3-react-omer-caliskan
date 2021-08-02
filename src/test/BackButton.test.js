@@ -14,12 +14,18 @@ describe("BackButton Component Test", () => {
         })
   
         it("should render backbutton", () => {
-          expect(backbutton).toMatchSnapshot();
+          expect(backbutton.debug()).toMatchSnapshot();
         })
   
         it("should check backbutton class", () => {
-          const buttonTextCheck = backbutton.hasClass("backbutton")
+          const buttonTextCheck = backbutton.find('button').hasClass("backbutton")
   
           expect(buttonTextCheck).toBeTruthy();
+        })
+
+        it("should check backbutton's link", () => {
+          const backLink = backbutton.find('Link').prop('to')
+
+          expect(backLink).toEqual('/')
         })
       })

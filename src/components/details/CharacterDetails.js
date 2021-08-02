@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import EpisodeNames from './EpisodeNames';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom'
 import BackButton from '../layout/BackButton';
 import Loading from '../layout/Loading';
 import '../../assets/css/characterDetails.css';
 import { getCharacterById } from "../../service/RickandMortyService"
 
-function CharacterDetails(){
+function CharacterDetails(props, {idForTest}){
   const [character, setCharacter] = useState({
         name: "",
         image: "",
@@ -17,10 +16,10 @@ function CharacterDetails(){
         location: { name: "" },
         episode: [],
     });
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
   
-  const {id} = useParams();
-
+    const {id} = useParams();
+    
   useEffect( () => {
 
     const fetch = async () => {
@@ -36,9 +35,8 @@ function CharacterDetails(){
 
     return(
       loading ? <div className="details">
-          <Link to="/">
+          
             <BackButton />
-          </Link>
           <div className="detail-item">
             <div className="detail-item-img">
               <img src={character.image} alt = "Character Img" />
